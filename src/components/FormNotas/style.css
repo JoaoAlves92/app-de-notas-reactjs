@@ -1,0 +1,29 @@
+.FormNotas {
+    padding: 10px;
+}
+
+input {
+    display: block;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+textarea {
+    display: block;
+    resize: none;
+    height: 40%;
+    width: 80%;
+}
+
+button {
+    width: 206px;
+    height: 30px;
+    color: white;
+    background-color: rgba(62, 177, 81, 0.5);
+    border: none;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: rgba(5, 97, 20, 0.5)
+}
