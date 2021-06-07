@@ -26,7 +26,7 @@ class App extends Component {
     this.setState({
       notas: this.notas
     })
-    localStorage.removeItem(index);
+    localStorage.setItem('notas', JSON.stringify(this.notas));
   }
 
   render(){
