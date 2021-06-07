@@ -7,7 +7,9 @@ class App extends Component {
   constructor(){
     super();
     this.notas = JSON.parse(localStorage.getItem('notas')) || [];
-    this.state = {};
+    this.state = {
+      notas: this.notas
+    };
   }
      
   criarNota(titulo, texto){
@@ -19,11 +21,19 @@ class App extends Component {
     localStorage.setItem('notas', JSON.stringify(this.notas));
   }
 
+  deletaNota(index){
+    this.notas.splice(index, 1);
+    this.setState({
+      notas: this.notas
+    })
+    localStorage.removeItem(index);
+  }
+
   render(){
     return (
       <div className="App">
         <FormNotas criarNota={this.criarNota.bind(this)}/>
-        <ListaDeNotas notas={this.notas}/>
+        <ListaDeNotas notas={this.notas} deletaNota={this.deletaNota.bind(this)}/>
       </div>
     );
   }
