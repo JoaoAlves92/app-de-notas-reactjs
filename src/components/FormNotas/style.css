@@ -16,14 +16,15 @@ textarea {
 }
 
 button {
-    width: 206px;
+    width: 81%;
     height: 30px;
     color: white;
-    background-color: rgba(62, 177, 81, 0.5);
+    background-color: rgba(42, 211, 70);
     border: none;
     transition: 0.5s;
+    margin-top: 1rem;
 }
 
 button:hover {
-    background-color: rgba(5, 97, 20, 0.5)
+    background-color: rgba(5, 97, 20)
 }
